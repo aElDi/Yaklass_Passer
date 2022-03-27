@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "Yaklass_helper",
+    "version": "1.1",
+    "description": "yaklass helper by a3ldi",
+    "icons": {
+        "32": "icons/32.png",
+        "96": "icons/96.png",
+        "64": "icons/64.png"
+    },
+    "applications": {
+        "gecko": {
+            "id": "yaklass_helper@aeldi"
+        }
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "unlimitedStorage"
+    ],
+
+    "browser_action": {
+        "default_icon": "icons/64.png",
+        "default_title": "YaKlass Помощник",
+        "default_popup": "index.html"
+    }
+}
