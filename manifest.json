@@ -1,14 +1,14 @@
 {
     "manifest_version": 2,
     "name": "Yaklass_helper",
-    "version": "1.2",
+    "version": "1.2.1",
     "description": "yaklass helper by a3ldi",
     "icons": {
         "32": "icons/32.png",
         "96": "icons/96.png",
         "64": "icons/64.png"
     },
-    "applications": {
+    "browser_specific_settings": {
         "gecko": {
             "id": "yaklass_helper_full@aeldi"
         }
