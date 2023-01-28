@@ -1,42 +1,38 @@
 
-function tren(vproc, voc) {
-    var tp = document.getElementsByClassName('topic-progress');
-    for (var k = 0; k < tp.length; k++) {
-        let act = tp[k];
-        var prc = act.firstElementChild;
-        prc.lastElementChild.style = 'width:' + vproc + '%';
-
-        var oc = document.createElement('span');
-        oc.classList.add('crc-mark');
-        oc.title = 'оценка';
-        oc.innerText = voc;
-        act.insertBefore(oc, act.firstChild);
-    }
-
-    var th = document.querySelectorAll('.theory-table td.tbl-points');
-    for (var p = 0; p < th.length; p++) {
-        let t = th[p];
+function tren(input_proc, input_mark) {
+    let tp = document.getElementsByClassName('topic-progress')[0];
+    tp.firstElementChild.lastElementChild.style = 'width:' + input_proc + '%';
+    let oc = document.createElement('span');
+    oc.classList.add('crc-mark');
+    oc.innerText = input_mark;
+    tp.insertBefore(oc, tp.firstChild);
+    let tbl_points = document.querySelectorAll('.theory-table td.tbl-points');
+    for (t of tbl_points) {
         t.innerHTML = '<div class="svg-sprite-vs result-perfect"></div>';
     }
-    var els = document.querySelectorAll('.exercise-table div.tbl-points');
-    for (var i = 0; i < els.length; i++) {
-        let f = els[i];
+    document.querySelectorAll('.exercise-table div.tbl-points').forEach((f) => {
         f.firstElementChild.classList.replace('top-point-empty', 'top-point-full');
         f.firstElementChild.classList.replace('top-point-half', 'top-point-full');
         f.firstElementChild.classList.replace('profile-point-empty', 'profile-point-full');
-        var max = Number(f.lastElementChild.innerText);
+
+        let max = Number(f.lastElementChild.innerText);
         max = isNaN(max) ? Number(f.lastElementChild.lastElementChild.innerText) : max;
+
         f.lastElementChild.innerHTML = '';
-        var ern = document.createElement('span');
-        ern.classList.add('earned');
-        ern.innerText = max;
-        var elm = document.createElement('span');
-        elm.classList.add('max');
-        elm.innerText = max;
+
+        let earned_points = document.createElement('span');
+        earned_points.classList.add('earned');
+        earned_points.innerText = max;
+
+        let max_points = document.createElement('span');
+        max_points.classList.add('max');
+        max_points.innerText = max;
+
         f.appendChild(ern);
         f.innerHTML += ' / ';
-        f.appendChild(elm);
-    }
+        f.appendChild(max_points);
+    });
+
 }
 
 browser.storage.local.get(['proc', 'oc']).then((data) => {

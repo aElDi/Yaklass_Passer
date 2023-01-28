@@ -1,13 +1,12 @@
-## Yaklass_Passer
-Yaklass helper. Changes the CSS style of tests.
-Works as a browser extension. 
-# After installation:
-1. Go to the test page
-2. Open the extension and enter the percentage and grade
-3. Click "change"
+# Yaklass Helper
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Soffity_Yaklass_Passer&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=Soffity_Yaklass_Passer)
+Расширение помогает подделать скриншоты для ЯКласса. Работает в Firefox. Теперь можно не делать дз🤍
+ 
 
-# Browser support
+## Browser support
 
-* Firefox
-* Chromium Browsers - ❗ - partial support
-* Edge
+  
+| Browser |Link  |
+|--|--|
+| Firefox | [Addons Marketplace](https://addons.mozilla.org/ru/firefox/addon/yaklass_helper/) |
+| Chrome | [Github release](https://github.com/aElDi/Yaklass_Passer/releases/latest) |

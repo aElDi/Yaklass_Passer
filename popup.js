@@ -1,6 +1,6 @@
 function go() {
-    var proc = document.getElementById('prc').value;
-    var oc = document.getElementById('oc').value;
+    let proc = document.getElementById('prc').value;
+    let oc = document.getElementById('oc').value;
     browser.storage.local.set({
         proc: proc,
         oc: oc

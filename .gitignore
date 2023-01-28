@@ -1,2 +1,5 @@
 *.xpi
 *.zip
+.gitignore
+tailwindcss-3.2.4.js
+build.bat
