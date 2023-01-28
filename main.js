@@ -1,9 +1,6 @@
 
 function tren(vproc, voc) {
-    //<span class="crc-mark" title="оценка">5</span>
     var tp = document.getElementsByClassName('topic-progress');
-    // var voc = prompt('Какая оценка?', '5');
-    // var vproc = prompt('Сколько процентов?', '56');
     for (var k = 0; k < tp.length; k++) {
         let act = tp[k];
         var prc = act.firstElementChild;
@@ -15,14 +12,6 @@ function tren(vproc, voc) {
         oc.innerText = voc;
         act.insertBefore(oc, act.firstChild);
     }
-    // <td>
-    // <div class="tbl-points" title="Лучший результат">                                       
-    // <div class="svg-sprite-vs top-point-full"></div>
-    // <span class="points">
-    // <span class="earned">1</span> / <span class="max">1</span>
-    // </span>
-    // </div>
-    // </td>
 
     var th = document.querySelectorAll('.theory-table td.tbl-points');
     for (var p = 0; p < th.length; p++) {
