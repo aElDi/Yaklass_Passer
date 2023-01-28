@@ -33,9 +33,10 @@ function tren(vproc, voc) {
     for (var i = 0; i < els.length; i++) {
         let f = els[i];
         f.firstElementChild.classList.replace('top-point-empty', 'top-point-full');
+        f.firstElementChild.classList.replace('top-point-half', 'top-point-full');
         f.firstElementChild.classList.replace('profile-point-empty', 'profile-point-full');
         var max = Number(f.lastElementChild.innerText);
-        max = isNaN(max) ? 1 : max;
+        max = isNaN(max) ? Number(f.lastElementChild.lastElementChild.innerText) : max;
         f.lastElementChild.innerHTML = '';
         var ern = document.createElement('span');
         ern.classList.add('earned');
