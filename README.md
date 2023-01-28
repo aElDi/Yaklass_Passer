@@ -1,5 +1,6 @@
 # Yaklass Helper
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Soffity_Yaklass_Passer&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=Soffity_Yaklass_Passer)
+
 Расширение помогает подделать скриншоты для ЯКласса. Работает в Firefox. Теперь можно не делать дз🤍
  
 

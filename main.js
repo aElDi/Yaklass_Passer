@@ -7,7 +7,7 @@ function tren(input_proc, input_mark) {
     oc.innerText = input_mark;
     tp.insertBefore(oc, tp.firstChild);
     let tbl_points = document.querySelectorAll('.theory-table td.tbl-points');
-    for (t of tbl_points) {
+    for (let t of tbl_points) {
         t.innerHTML = '<div class="svg-sprite-vs result-perfect"></div>';
     }
     document.querySelectorAll('.exercise-table div.tbl-points').forEach((f) => {
